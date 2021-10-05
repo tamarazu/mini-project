@@ -6,6 +6,7 @@ export default function Head({ data }) {
   const api_image = 'https://image.tmdb.org/t/p'
   const { 
     poster_path, 
+    backdrop_path,
     title, 
     genres, 
     release_date, 
@@ -26,23 +27,47 @@ export default function Head({ data }) {
 return (
     <div
       className={styles.section}
+      style={{
+        backgroundImage: `url(${api_image + '/original' + backdrop_path})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center'
+      }}
     >
-      <img src={api_image + '/w500' + poster_path }/>
-      <div>
-        <h1>{title} ({year})</h1>
+      <section className={styles.overlay}>
+        <img src={api_image + '/w500' + poster_path }/>
         <div
-          className={styles.categories}
+          className={styles.description}
         >
-          {
-            genres.length ? 
-            genres.map(data => <p>{data.name}</p>)
-            :
-            <span></span>
-          } |
-          <p>{hour}h {minute}m</p>
-          <p>{overview}</p>
+          <h1>{title} <span>({year})</span></h1>
+          <div
+            className={styles.categories}
+          >
+            {
+              genres.length ? 
+              genres.map((data, index) =>
+              <>
+                {
+                  (index !== (genres.length -1)) ?
+                  <>
+                    <p>&nbsp;{data.name},</p>
+                  </>
+                  :
+                  <p>&nbsp;{data.name}</p>
+                }
+              </>
+              )
+              :
+              <span></span>
+            }
+            <i className="fas fa-circle"></i>
+            <p>{hour}h {minute}m</p>
+          </div>
+          <p
+            className={styles.overview}
+          >{overview}</p>
         </div>
-      </div>
+      </section>
     </div>
   )
   return <span></span>

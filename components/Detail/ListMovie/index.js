@@ -18,22 +18,46 @@ export default function ListMovie({data}) {
             spaceBetween: 8
           },
           350: {
-            slidesPerView: 1.3,
+            slidesPerView: 2,
             spaceBetween: 8
           },
           380: {
-            slidesPerView: 1.4,
+            slidesPerView: 2,
             spaceBetween: 8
           },
           480: {
-            slidesPerView: 1.7,
+            slidesPerView: 2,
+            spaceBetween: 8
+          },
+          540: {
+            slidesPerView: 2.7,
             spaceBetween: 8
           },
           640: {
-            slidesPerView: 1.7,
+            slidesPerView: 3,
             spaceBetween: 8
           },
-          780:{
+          750:{
+            slidesPerView: 3.5,
+            spaceBetween: 8
+          },
+          850:{
+            slidesPerView: 4,
+            spaceBetween: 8
+          },
+          920:{
+            slidesPerView: 4.5,
+            spaceBetween: 8
+          },
+          1000:{
+            slidesPerView: 5,
+            spaceBetween: 8
+          },
+          1200:{
+            slidesPerView: 5.7,
+            spaceBetween: 8
+          },
+          1300:{
             slidesPerView: 6.7,
             spaceBetween: 8
           }

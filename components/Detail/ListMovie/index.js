@@ -5,12 +5,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 export default function ListMovie({data}) {
-  console.log(data, 'popopopop');
   return (
     <div
       className={styles.section}
     >
-
+      <h3>More Like This</h3>
       <Swiper
         breakpoints={{
           320: {

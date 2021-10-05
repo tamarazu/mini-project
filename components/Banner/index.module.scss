@@ -1,4 +1,15 @@
 .section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3{
+    color: white;
+    margin: 8px;
+    font-weight: 600;
+    width: 92vw;
+  }
 
   .row{
     display: flex;

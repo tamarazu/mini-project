@@ -63,6 +63,8 @@ return (
             <i className="fas fa-circle"></i>
             <p>{hour}h {minute}m</p>
           </div>
+
+          <h3>Overview</h3>
           <p
             className={styles.overview}
           >{overview}</p>

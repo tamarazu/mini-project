@@ -1,7 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import styles from '../styles/Home.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   getMovies
@@ -13,6 +11,8 @@ import Banner from 'components/Banner'
 
 export default function Home() {
   const dispatch = useDispatch()
+  const router = useRouter()
+  const { asPath } = router
   const [page, setPage] = useState(1)
   const {
     movie
@@ -27,11 +27,10 @@ export default function Home() {
     if (!movie.length) {
       dispatch(getMovies({ page: 1 }))
     }
-  }, [dispatch, movie])
+  }, [dispatch, movie, asPath])
 
   return (
       <Layout>
-        <p> masuk kesini</p>
         <InfiniteScroll
         initialLoad={false}
         loadMore={loadMoreAction}

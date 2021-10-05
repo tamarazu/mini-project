@@ -12,7 +12,7 @@ export default function Banner({ data }) {
     <div
       className={styles.section}
     >
-      <p> Banner</p>
+      <h3>Now Playing </h3>
       <div
         className={styles.row}
       >

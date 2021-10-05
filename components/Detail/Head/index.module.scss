@@ -3,9 +3,10 @@
 
   .overlay{
     padding: 32px;
+    width: 100vw;
     background-image: linear-gradient(to right, rgba(9.80%, 5.49%, 6.67%, 1.00) 150px, rgba(9.80%, 5.49%, 6.67%, 0.84) 100%);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 
     img{
       height: 400px;
@@ -42,8 +43,10 @@
         }
       }
 
-      .overview{
-        margin: 32px 0 0 0;
+      h3{
+        margin: 32px 0 8px 0;
+        font-weight: 600;
+        font-size: 22px;
       }
     }
   }

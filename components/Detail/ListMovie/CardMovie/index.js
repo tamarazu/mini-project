@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from './index.module.scss'
 
@@ -13,25 +14,30 @@ export default function index({ detail }) {
   }
 
   return (
-    <div 
-      className={styles.card}
-      onClick={directDetailPage}
-    >
-      <img src={api_image + poster_path} alt={title}/>
 
-      <div className={styles.overlay}/>
-
-      <div
-        className={styles.text}
+    <Link href={'/movie/' + id}>
+      <a target="_blank">
+      <div 
+        className={styles.card}
+        // onClick={directDetailPage}
       >
-        <p>{title}</p>
-        <p
-          className={styles.vote}
+        <img src={api_image + poster_path} alt={title}/>
+
+        <div className={styles.overlay}/>
+
+        <div
+          className={styles.text}
         >
-          <i class="fas fa-star"></i> 
-          {vote_average}
-        </p>
+          <p>{title}</p>
+          <p
+            className={styles.vote}
+          >
+            <i class="fas fa-star"></i> 
+            {vote_average}
+          </p>
+        </div>
       </div>
-    </div>
+      </a>
+    </Link>
   )
 }

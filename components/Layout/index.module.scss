@@ -1,17 +1,29 @@
 .layout{
-  // background-color: #2C394B;
+  background-color: #2C394B;
   width: 100vw;
-  display: flex;
-  // color: white;
-  // justify-content: space-between;
 
   nav{
-    background-color: bisque;
-    width: 16vw;
-    // position: fixed;
+    background-color: #082032;
+    width: 100vw;
+    height: 76px;
+    position: fixed;
+    z-index: 5;
+    padding: 20px;
+    color: #FDFCE5 !important;
+    font-size: 24px;
+    font-weight: 600;
+
+    a {
+      color: #FDFCE5;
+    }
+
+    a:hover {
+      transition: ease-in-out 0.5s;
+      color: #F4D19B;
+    }
   }
 
   .content{
-    // background-color: brown;
+    padding-top: 76px;
   }
 }

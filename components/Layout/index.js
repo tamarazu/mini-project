@@ -5,11 +5,11 @@ import React from 'react'
 export default function Index({children}) {
   return (
     <div className={styles.layout}>
-      {/* <nav>
-        <Link href="/detail">
-          <a>HTML</a>
+      <nav>
+        <Link href="/">
+          <a> Rebel WatchDB</a>
         </Link>
-      </nav> */}
+      </nav>
       <div
         className={styles.content}
       >

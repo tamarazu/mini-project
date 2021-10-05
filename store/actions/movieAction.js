@@ -11,6 +11,13 @@ export const setMovie = (value) => async dispatch => {
   })
 }
 
+export const setSimilliarMovie = (value) => async dispatch => {
+  dispatch({
+    type: types.SET_SIMILLIAR_MOVIE,
+    payload: value
+  })
+}
+
 export const setDetailMovie = (value) => async dispatch => {
   dispatch({
     type: types.SET_DETAIL_MOVIE,
@@ -61,7 +68,24 @@ export const getSimilliarMovie = (value) => async dispatch => {
       }
     })
     console.log(data);
-    dispatch(setMovie(data.results))
+    dispatch(setSimilliarMovie(data.results))
+  } catch (err) {
+    console.log(err.message);
+  }
+}
+
+export const getCreditsMovie = (value) => async dispatch => {
+  try {
+    const { data } = await axios({
+      method: 'get',
+      url: link + `/movie/${value.id}/similar`,
+      params: {
+        api_key,
+        page: value.page
+      }
+    })
+    console.log(data);
+    dispatch(setSimilliarMovie(data.results))
   } catch (err) {
     console.log(err.message);
   }

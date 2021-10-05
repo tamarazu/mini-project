@@ -2,15 +2,17 @@ import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useDispatch, useSelector } from 'react-redux'
 import { getDetailMovie, getSimilliarMovie } from 'store/actions/movieAction'
-import Head from 'components/Detail/Head'
+import HeadComponent from 'components/Detail/Head'
 import ListMovie from 'components/Detail/ListMovie'
+import Layout from 'components/Layout/index'
+import Head from 'next/head'
 
 export default function DetailPage() {
   const router = useRouter()
   const { query } = router
   const { id } = query
   const dispatch = useDispatch()
-  const { detailMovie, movie } = useSelector(state => state.movie)
+  const { detailMovie, similliarMovie } = useSelector(state => state.movie)
   const api_image = 'https://image.tmdb.org/t/p/'
 
   useEffect(() => {
@@ -21,16 +23,19 @@ export default function DetailPage() {
   }, [id])
 
   return (
-    <div>
+    <Layout>
+      <Head>
+        <title>{detailMovie? detailMovie.title : 'Rebel WatchDB'}</title>
+      </Head>
       {
         detailMovie ?
         <>
-          <Head data={detailMovie}/>
-          <ListMovie data={movie}/>
+          <HeadComponent data={detailMovie}/>
+          <ListMovie data={similliarMovie}/>
         </>
         :
         <span></span>
       }
-    </div>
+    </Layout>
   )
 }

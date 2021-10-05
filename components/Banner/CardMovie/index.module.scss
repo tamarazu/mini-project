@@ -1,0 +1,56 @@
+.card{
+  height: 300px;
+  width: 200px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px 8px;
+  cursor: pointer;
+
+  @media only screen and (max-width: 600px) {
+    height: 280px;
+    width: 180px;
+  }
+
+  .overlay{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(transparent, #000000f7);
+  }
+
+  img{
+    height: 100%;
+  }
+
+  .text{
+    width: 100%;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    padding: 8px;
+    line-height: 20px;
+
+    p{
+      margin: 0;
+      font-weight: 600;
+      max-height: 42px;
+      overflow: hidden;
+    }
+
+    .vote{
+      margin-top: 4px;
+      font-size: 14px;
+      height: auto;
+
+      i{
+        margin-right: 8px;
+        color: #FFB344;
+      }
+    }
+  }
+}

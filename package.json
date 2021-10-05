@@ -9,15 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.22.0",
+    "env-cmd": "^10.1.0",
     "next": "11.1.2",
     "next-redux-wrapper": "^7.0.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-infinite-scroller": "^1.2.4",
     "react-redux": "^7.2.5",
     "redux": "^4.1.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
-    "sass": "^1.42.1"
+    "sass": "^1.42.1",
+    "swiper": "^7.0.8"
   },
   "devDependencies": {
     "eslint": "7.32.0",

@@ -1,1 +1,2 @@
-// export const GET_POSTS = 'GET_POSTS'
+export const SET_MOVIE = 'SET_MOVIE'
+export const SET_DETAIL_MOVIE = 'SET_DETAIL_MOVIE'

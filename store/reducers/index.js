@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux'
-// import { dombalioReducer } from './dombalioReducer'
-// import { galaxcio } from './galaxcio'
+import { movieReducers } from './movieReducers'
 
 export default combineReducers({
-  // dombalioReducer: dombalioReducer,
-  // galaxcio: galaxcio
+  movie: movieReducers
 })
